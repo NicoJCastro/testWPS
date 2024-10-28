@@ -1,0 +1,14 @@
+// src/index.js
+
+const app = require('./app');
+const dotenv = require('dotenv');
+
+// Configurar dotenv para usar variables de entorno
+dotenv.config();
+
+const port = process.env.PORT || 3000;
+
+// Iniciar el servidor
+app.listen(port, () => {
+  console.log(`Servidor corriendo en http://localhost:${port}`);
+});
